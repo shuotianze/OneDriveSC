@@ -17,4 +17,4 @@
 >在线体验：https://one.sdax.top/
 
 ### WEB在线体验windows 
->下载链接：
+>下载链接：https://github.com/shuotianze/OneDriveSC/blob/main/dist/OneDrive%E6%96%87%E4%BB%B6%E7%9B%B4%E9%93%BE.exe
