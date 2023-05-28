@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDrive直链生成器</title>
 
+
+    <!-- 添加样式表 -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url("https://www.sdax.top/img/index_img.jpg");
+            background-size: cover;
+        }
+
+        .blur-bg{
+          backdrop-filter: blur(20px);
+          position:absolute;
+          top:-50%;
+          left:-50%;
+          width:200%;
+          height:200%;
+          z-index:-1;    
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            
+          	/* 设置宽度为70% */
+          	width:70vw; 
+          	/* 自适应高度 */ 
+          	height:10vm;     
+        }
+
+        .footer {
+        padding: 20px; /* 底部区域内边距 */
+        text-align: center; /* 文字居中对齐 */
+        font-size: 15px; /* 设置字体大小 */
+        color: #fff; /* 设置字体颜色 */
+        
+    }
+        h1 {
+            text-align:center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 设置标题字体 */
+            color:#222; /* 设置标题颜色 */
+        }
+        
+        p {
+           font-family:'Microsoft YaHei',sans-serif; /* 设置正文字体 */
+           color:#444; /* 设置正文颜色 */
+           line-height:normal; /* 恢复默认行高 */ 
+         }
+        
+         input[type=text], input[type=submit]{
+              border:none;/*去掉边框*/
+              outline:none;/*去掉轮廓线*/
+              padding:.3em .4em;/*加上一点内边距，美观效果更佳*/
+              margin: 10px 0;/*调整边距，更好的布局*/
+              display:inline-block;/*内联元素*/
+              box-sizing:border-box;/*盒模型*/
+              font-family:'Microsoft YaHei',sans-serif;/*设置字体*/
+              font-size:18px;
+              border-radius: 20px; /* 设置输入框圆角 */
+            }
+            
+        input[type=submit]{
+              cursor:pointer;/*添加手型鼠标光标效果*/
+              background-color:#4CAF50; /*设置背景颜色为绿色 */
+              color:white; /*设置文字颜色为白色 */
+              padding:.5em .8em;/*增加按钮内边距，美观效果更佳*/
+            }
+            
+        input[type=submit]:hover{
+             background-color:#3e8e41; /*设置按钮悬停时的背景颜色为深绿色 */
+        }
+        
+    </style>
+</head>
+<body>
+
+<!-- 居中对齐表单内容 -->
+<div class="blur-bg"></div>
+<div class="box">
+    <h1>OneDrive直链生成器</h1>
+
+    {% if error %}
+        <p style="color: red">{{error}}</p>
+    {% endif %}
+
+    <form method="post" action="{{url_for('index')}}">
+        <label for="url">请输入你的OneDrive单文件分享链接：</label><br>
+        <input type="text" id="url" name="url"><br><br>
+        <input type="submit" value="生成">
+    </form>
+
+    {% if url %}
+        <p>OneDrive直接链接为：{{url}}</p>
+    {% endif %}
+</div>
+
+</body>
+<footer class="footer">
+    &copy; 2023 OneDrive直链生成器 | 作者：万能的啊朔 | <a href="https://www.sdax.top" style="color: #fff;">关于</a>
+   </footer>
+</html>
