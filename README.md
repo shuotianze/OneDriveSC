@@ -6,7 +6,7 @@
 
 >安装环境：pip install flask
 
-运行py OneDrive文件直链web.py
+>运行py OneDrive文件直链web.py
 
 ### 命令行
 
