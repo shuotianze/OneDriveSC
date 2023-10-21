@@ -22,4 +22,4 @@
 ### windows 下载
 >下载链接：https://github.com/shuotianze/OneDriveSC/blob/main/dist/OneDrive%E6%96%87%E4%BB%B6%E7%9B%B4%E9%93%BE.exe
 
-### 博客 `www.sdax.top`
+### 博客 `www.0oo0.cc`
