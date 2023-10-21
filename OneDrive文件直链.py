@@ -23,7 +23,7 @@ if __name__ == "__main__":
     while True:
         try:
             if first_run:  # 第一次运行时输出提示语句
-                print("作者万能的啊朔，了解更多访问：www.sdax.top")
+                print("作者万能的啊朔，了解更多访问：www.0oo0.cc")
                 first_run = False
             
             url = input("请输入你的OneDrive单文件分享链接：")
