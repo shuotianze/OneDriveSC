@@ -2,6 +2,8 @@ import re
 import tkinter as tk
 import pyperclip
 import webbrowser
+import base64
+import os
 
 
 def judgeLink(url):
@@ -43,7 +45,6 @@ def open_github():
 # 创建窗口
 window = tk.Tk()
 window.title("OneDrive直链生成器")
-window.iconbitmap('/favicon.ico')
 
 # 获取屏幕尺寸
 screen_width = window.winfo_screenwidth()
@@ -78,3 +79,10 @@ github = tk.Button(window, text="Github", command=open_github)
 github.pack(side=tk.RIGHT, padx=10)
 # 启动 GUI 应用程序
 window.mainloop()
+
+# 创建图标
+tmp = open("tmp.ico", "wb+")
+tmp.write(base64.b64decode('图标的编码'))
+tmp.close()
+window.iconbitmap("tmp.ico")
+os.remove("tmp.ico")  #删除icon文件 
