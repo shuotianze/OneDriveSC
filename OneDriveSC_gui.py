@@ -3,6 +3,7 @@ import tkinter as tk
 import pyperclip
 import webbrowser
 
+
 def judgeLink(url):
     reg1 = r'https://.+sharepoint\.com'
     reg2 = r'personal/(\w+?)/'
@@ -42,7 +43,14 @@ def open_github():
 # 创建窗口
 window = tk.Tk()
 window.title("OneDrive直链生成器")
-window.geometry("485x195")
+window.iconbitmap('/favicon.ico')
+
+# 获取屏幕尺寸
+screen_width = window.winfo_screenwidth()
+screen_height = window.winfo_screenheight()
+
+# 设置窗口位置居中
+window.geometry("485x195+{}+{}".format(int((screen_width-485)/2), int((screen_height-195)/2)))
 
 # 创建标签和输入框
 url_label = tk.Label(window, text="请输入你的OneDrive单文件分享链接：")
