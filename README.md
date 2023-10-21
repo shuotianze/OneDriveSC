@@ -1,6 +1,6 @@
 # OneDriveSC
 ## OneDrive文件直链
-使用python制作，基于如何提取OneDrive文件直链？`https://www.skyqian.com/archives/OneDrive-straight.html`的python脚本开发
+使用python制作，基于`https://www.skyqian.com/archives/OneDrive-straight.html`的python脚本二次开发
 
 ### web端
 
